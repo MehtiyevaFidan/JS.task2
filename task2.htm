@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 40px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid blue;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="a">
+    <span id="netice1">?</span>
+    <input type="text" id="b">
+    <span id="netice2">?</span>
+    <input type="text" id="c">
+    <button onclick="yoxla()">yoxla</button>
+
+    <script>
+        let a = document.getElementById("a");
+        let b = document.getElementById("b");
+        let c = document.getElementById("c");
+        let netice1 = document.getElementById("netice1");
+        let netice2 = document.getElementById("netice2");
+
+        function yoxla() {
+            if (a.value > b.value) {
+                netice1.innerHTML = ">";
+            } else if (a.value < b.value) {
+                netice1.innerHTML = "<";
+            } else {
+                netice1.innerHTML = "=";
+            }
+            if (b.value > c.value) {
+                netice2.innerHTML = ">";
+            } else if (b.value < c.value) {
+                netice2.innerHTML = "<";
+            } else {
+                netice2.innerHTML = "=";
+            }
+        }
+    </script>
+</body>
+
+</html>

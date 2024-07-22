@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<style>
+    p{
+        color:red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="blcok">
+        <input type="text" id="a"> x<sup>2</sup> +
+        <input type="text" id="b"> x +
+        <input type="text" id="c">
+        <button onclick="btn()">=</button>
+        <p> x1=
+            <span id="p1"></span>
+            <span id="kok1"></span>
+        </p>
+        <p> x2=
+            <span id="p2"></span>
+            <span id="kok2"></span>
+        </p>
+    </div>
+    <script>
+        let a = document.getElementById("a")
+        let b = document.getElementById("b")
+        let c = document.getElementById("c")
+        let p1 = document.getElementById("p1")
+        let p2 = document.getElementById("p2")
+        let kok1 = document.getElementById("kok1")
+        let kok2 = document.getElementById("kok2")
+        let netice = document.getElementById("netice")
+
+        function btn() {
+            p1.innerHTML = (- +b.value * +b.value + 4 * a.value * c.value) / 2 * a.value
+            p2.innerHTML = (- +b.value * b.value - 4 * a.value * c.value) / 2 * a.value
+            if (p1.innerHTMLvalue > 0) {
+                kok1.innerHTML = "2 kok"
+
+            } else {
+                p1.innerHTML == 0
+                kok1.innerHTML = "Koku 0"
+            }
+            if (p2.innerHTML < 0) {
+                kok2.innerHTML = "Koku yoxdu"
+
+            } else {
+                p2.innerHTML == 0
+                kok2.innerHTML = "Koku 0"
+            }
+        }
+    </script>
+</body>
+
+</html
